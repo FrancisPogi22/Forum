@@ -11,11 +11,11 @@ class AuthenticationController extends Controller
 
         return view('userpages.dashboard');
     }
-
-    public function logout()
-    {
-        auth()->logout();
-        session()->flush();
-        return redirect('/');
+    public function logout(Request $request){
+        if($request->session()->has('loginId')) {
+            $request->session()->forget('loginId');
+            return redirect()->route('login')->with('success', 'You have been logged out successfully');
+        }
+        return redirect()->route('login');
     }
 }
