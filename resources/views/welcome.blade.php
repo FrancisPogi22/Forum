@@ -14,8 +14,9 @@
                     </div>
                     <div class="field-con password-field">
                         <label for="password">Password</label>
-                        <input type="password" name="password" class="form-control" placeholder="Password" required>
-                        <i class="bi bi-eye-slash"></i>
+                        <input type="password" name="password" id="authPassword" class="form-control" placeholder="Password"
+                            required>
+                        <i class="bi bi-eye-slash" id="togglePassword"></i>
                     </div>
                     <div class="btn-con">
                         <button type="submit" class="btn btn-success">Login</button>
