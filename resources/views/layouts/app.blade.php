@@ -16,12 +16,19 @@
         <div class="wrapper">
             <div class="header-con">
                 <ul class="navbar">
-                    <li>
-                        <a href="{{ route('welcome') }}">Login</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('register') }}">Register</a>
-                    </li>
+                    @auth
+                        <li>
+                            <a href="{{ route('welcome') }}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}">Register</a>
+                        </li>
+                    @endauth
+                    @guest
+                        <li>
+                            <a href="{{ route('logout.user') }}">Logout</a>
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </div>

@@ -20,6 +20,6 @@ Route::get('/register', function () {
 })->name('register');
 
 Route::controller(AuthenticationController::class)->group(function () {
-    
-    Route::post('/login', 'authUser')->name('login.user');
+    Route::post('/login', 'login')->name('login.user');
+    Route::get('/logout', 'logout')->name('logout.user');
 });
