@@ -12,7 +12,10 @@ class AuthenticationController extends Controller
         return view('userpages.dashboard');
     }
 
-    public function logout(Request $request)
+    public function logout()
     {
+        auth()->logout();
+        session()->flush();
+        return redirect('/');
     }
 }

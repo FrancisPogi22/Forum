@@ -18,15 +18,15 @@
                 <ul class="navbar">
                     @auth
                         <li>
-                            <a href="{{ route('welcome') }}">Login</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('logout.user') }}">Logout</a>
                         </li>
                     @endauth
                     @guest
                         <li>
-                            <a href="{{ route('logout.user') }}">Logout</a>
+                            <a href="{{ route('welcome') }}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}">Register</a>
                         </li>
                     @endguest
                 </ul>
