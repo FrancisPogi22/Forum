@@ -1,0 +1,36 @@
+#main .wrapper {
+    max-width: 1440px;
+}
+
+#main .main-con {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#main form {
+    padding: 20px;
+    background: #ffffff;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+        drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+#main .field-con {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#main .password-field {
+    position: relative;
+}
+
+#main .password-field i {
+    right: 10px;
+    top: 35px;
+    cursor: pointer;
+    position: absolute;
+}
