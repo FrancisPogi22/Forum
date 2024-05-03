@@ -12,6 +12,21 @@
 </head>
 
 <body>
+    <section id="header">
+        <div class="wrapper">
+            <div class="header-con">
+                <ul class="navbar">
+                    <li>
+                        <a href="{{ route('welcome') }}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('register') }}">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     @yield('content')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
